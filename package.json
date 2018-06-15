@@ -1,0 +1,56 @@
+{
+  "name": "@taito/react-native-uikit",
+  "version": "0.0.0-development",
+  "description": "Collection of React Native UI components",
+  "main": "lib/react-native-uikit.js",
+  "directories": {
+    "example": "examples"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest",
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "build:watch": "rollup -c --watch",
+    "clean:install": "rimraf node_modules && npm install",
+    "link:examples": "npm link && cd examples && npm link @taito/react-native-uikit",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TaitoUnited/react-native-uikit.git"
+  },
+  "keywords": [
+    "react native",
+    "uikit"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "Taito United Oy <support@taitounited.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaitoUnited/react-native-uikit/issues"
+  },
+  "homepage": "https://github.com/TaitoUnited/react-native-uikit#readme",
+  "peerDependencies": {
+    "react": ">=16.3.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "husky": "0.14.3",
+    "jest": "23.0.0",
+    "prettier": "^1.10.2",
+    "react": "16.4.0",
+    "react-native": ">=0.24.0",
+    "rimraf": "2.6.2",
+    "semantic-release": "^15.5.2",
+    "travis-deploy-once": "^5.0.0"
+  }
+}
